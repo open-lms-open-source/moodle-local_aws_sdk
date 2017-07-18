@@ -18,15 +18,15 @@
  * Version.
  *
  * @package   local_aws_sdk
- * @copyright Copyright (c) 2016 Blackboard Inc. (http://www.blackboard.com)
+ * @copyright Copyright (c) 2017 Blackboard Inc. (http://www.blackboard.com)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 /** @var stdClass $plugin */
-$plugin->version   = 2016111600;
-$plugin->requires  = 2016052301;
+$plugin->version   = 2015111600;
+$plugin->requires  = 2015051100;
 $plugin->component = 'local_aws_sdk';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '3.1.3 (Build: 20161114)';
+$plugin->release   = '2.9 (Build: 2015111600)';

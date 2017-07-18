@@ -24,4 +24,4 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'AWS SDK';
+$string['pluginname'] = 'AWS SDK 2';

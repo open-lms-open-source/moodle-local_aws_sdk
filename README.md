@@ -5,7 +5,10 @@ dedicated to bringing excellent online teaching to institutions across the globe
 schools and organizations by supporting the software that educators use to manage and deliver instructional content to
 learners in virtual classrooms.  We are proud to be a Moodle Partner company.
 
-This plugin only serves as a way to distribute the AWS SDK for PHP.
+This plugin only serves as a way to distribute the AWS SDK v2.x for PHP.
+
+## Notice
+The purporse of this specific version og plugin is to offer support for users that still use PHP 5.4.x. In case you use PHP 5.5 or more recent install the appropriate version compatible with your Moodle setup. 
 
 # How to update the SDK
 
