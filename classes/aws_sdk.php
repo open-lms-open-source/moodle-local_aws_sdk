@@ -35,9 +35,46 @@ defined('MOODLE_INTERNAL') || die();
  */
 class aws_sdk {
     /**
+     * Required AWS config names.
+     */
+    const REQUIRED_CONFIGS = ['key', 'secret', 'region'];
+
+    /**
      * Autoload the AWS SDK classes.
      */
     public static function autoload() {
         require_once(__DIR__.'/../vendor/autoload.php');
+    }
+
+    /**
+     * Extract region, key and secret from CFG global.
+     *
+     * @param string $name The CFG config name
+     * @return array
+     */
+    public static function config_from_cfg($name) {
+        global $CFG;
+
+        if (empty($CFG->$name)) {
+            throw new \coding_exception('The $CFG->'.$name.' must be set');
+        }
+        if (!is_array($CFG->$name)) {
+            throw new \coding_exception('The $CFG->'.$name.' must be set to an array');
+        }
+        $cfg = $CFG->$name;
+        foreach (self::REQUIRED_CONFIGS as $key) {
+            if (!array_key_exists($key, $cfg)) {
+                throw new \coding_exception('The $CFG->'.$name.' is missing the \''.$key.'\' option.  '.
+                    'Required configs: '.implode(', ', self::REQUIRED_CONFIGS));
+            }
+        }
+
+        return [
+            'region'      => $cfg['region'],
+            'credentials' => [
+                'key'    => $cfg['key'],
+                'secret' => $cfg['secret']
+            ],
+        ];
     }
 }
