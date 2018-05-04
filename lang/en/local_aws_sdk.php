@@ -25,3 +25,4 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'AWS SDK';
+$string['privacy:metadata'] = 'The AWS SDK plugin does not store any personal data.';
