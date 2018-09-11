@@ -1,5 +1,5 @@
 {
-    "name": "moodlerooms/aws_sdk",
+    "name": "blackboard-open-source/aws_sdk",
     "description": "AWS SDK",
     "type": "project",
     "require": {

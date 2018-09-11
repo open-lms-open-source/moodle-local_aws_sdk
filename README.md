@@ -3,7 +3,7 @@
 This plugin was contributed by the Blackboard Product Development team.  Blackboard is an education technology company
 dedicated to bringing excellent online teaching to institutions across the globe.  We serve colleges and universities,
 schools and organizations by supporting the software that educators use to manage and deliver instructional content to
-learners in virtual classrooms.  We are proud to be a Moodle Partner company.
+learners in virtual classrooms.
 
 This plugin only serves as a way to distribute the AWS SDK for PHP.
 
