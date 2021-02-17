@@ -39,7 +39,7 @@ class local_aws_sdk_aws_apcu_cache_testcase extends advanced_testcase {
 
     const TEST_KEY = 'phpunit_local_aws_sdk_test';
 
-    protected function setUp() {
+    protected function setUp(): void {
         if (!extension_loaded('apcu')) {
             $this->markTestSkipped('The APCu extension is not loaded');
         }
