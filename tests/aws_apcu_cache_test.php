@@ -51,7 +51,7 @@ class local_aws_sdk_aws_apcu_cache_testcase extends advanced_testcase {
         }
     }
 
-    protected function tearDown() {
+    protected function tearDown(): void {
         apcu_delete(self::TEST_KEY);
     }
 
