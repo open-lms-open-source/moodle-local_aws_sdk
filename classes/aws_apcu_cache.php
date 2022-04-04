@@ -26,8 +26,6 @@ namespace local_aws_sdk;
 
 use Aws\CacheInterface;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * An APCu cache for AWS.
  *

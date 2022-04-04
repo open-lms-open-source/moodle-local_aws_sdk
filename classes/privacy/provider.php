@@ -24,8 +24,6 @@
 
 namespace local_aws_sdk\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for local_aws_sdk implementing null_provider.
  *

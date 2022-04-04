@@ -21,12 +21,10 @@
  * @copyright Copyright (c) 2017 Open LMS (https://www.openlms.net)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+namespace local_aws_sdk;
 use Aws\Credentials\Credentials;
 use local_aws_sdk\aws_apcu_cache;
 use local_aws_sdk\aws_sdk;
-
-defined('MOODLE_INTERNAL') || die();
 
 /**
  * Tests for APCu cache.
@@ -35,7 +33,7 @@ defined('MOODLE_INTERNAL') || die();
  * @copyright Copyright (c) 2017 Open LMS (https://www.openlms.net)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class local_aws_sdk_aws_apcu_cache_testcase extends advanced_testcase {
+class aws_apcu_cache_test extends \advanced_testcase {
 
     const TEST_KEY = 'phpunit_local_aws_sdk_test';
 
