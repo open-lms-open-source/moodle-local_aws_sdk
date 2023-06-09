@@ -3,7 +3,7 @@
     "description": "AWS SDK",
     "type": "project",
     "require": {
-        "aws/aws-sdk-php": "3.158.10"
+        "aws/aws-sdk-php": "3.235.7"
     },
     "license": "GPL"
 }
