@@ -9,6 +9,16 @@ This plugin only serves as a way to distribute the AWS SDK for PHP.
 ## Installation
 Extract the contents of the plugin into _/wwwroot/local_ then visit `admin/upgrade.php` or use the CLI script to upgrade your site.
 
+## Flags
+
+### The `proxyhost` flag.
+### The `proxyuser` flag.
+### The `proxypassword` flag.
+### The `proxytype` flag.
+### The `phpunit_local_aws_sdk_test` flag.
+### The `proxyport` flag.
+
+
 ## How to update the SDK
 Make any necessary updates to the `composer.json` file.  Usually nothing needs to change unless upgrading to the next
 major version.  Then, from within this project, run this command:
