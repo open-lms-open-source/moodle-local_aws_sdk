@@ -347,7 +347,8 @@ class CredentialProvider
 
             $tokenLocation = self::getHomeDir()
                 . '/.aws/sso/cache/'
-                . utf8_encode(sha1($ssoProfile['sso_start_url']))
+                // Open LMS patch for INT-19700 (1 line).
+                . \core_text::convert(sha1($ssoProfile['sso_start_url']), 'ISO-8859-1', 'UTF-8')
                 . ".json";
 
             if (!@is_readable($tokenLocation)) {
