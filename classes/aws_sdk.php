@@ -41,7 +41,10 @@ class aws_sdk {
      * Autoload the AWS SDK classes.
      */
     public static function autoload() {
-        require_once(__DIR__.'/../vendor/autoload.php');
+        /*
+         * This previously had: require_once(__DIR__.'/../vendor/autoload.php');, if needed we can put it back.
+         */
+        return true;
     }
 
     /**
