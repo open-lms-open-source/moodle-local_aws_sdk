@@ -54,7 +54,7 @@ class aws_sdk_test extends \advanced_testcase {
      * Test error handling for missing CFG value.
      */
     public function test_config_from_cfg_missing_cfg() {
-        $this->expectException(\coding_exception::class);
+        $this->expectException(\core\exception\coding_exception::class);
         aws_sdk::config_from_cfg('asdf_asdf_hodor');
     }
 
@@ -68,7 +68,7 @@ class aws_sdk_test extends \advanced_testcase {
 
         $CFG->phpunit_local_aws_sdk_test = 'hodor';
 
-        $this->expectException(\coding_exception::class);
+        $this->expectException(\core\exception\coding_exception::class);
         aws_sdk::config_from_cfg('phpunit_local_aws_sdk_test');
     }
 
@@ -85,7 +85,7 @@ class aws_sdk_test extends \advanced_testcase {
             'credentials_cache' => 'hodor',
         ];
 
-        $this->expectException(\coding_exception::class);
+        $this->expectException(\core\exception\coding_exception::class);
         aws_sdk::config_from_cfg('phpunit_local_aws_sdk_test');
     }
 

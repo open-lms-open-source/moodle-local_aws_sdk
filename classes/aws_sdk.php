@@ -57,15 +57,15 @@ class aws_sdk {
         global $CFG;
 
         if (empty($CFG->$name)) {
-            throw new \coding_exception('The $CFG->'.$name.' must be set');
+            throw new \core\exception\coding_exception('The $CFG->'.$name.' must be set');
         }
         if (!is_array($CFG->$name)) {
-            throw new \coding_exception('The $CFG->'.$name.' must be set to an array');
+            throw new \core\exception\coding_exception('The $CFG->'.$name.' must be set to an array');
         }
         $cfg = $CFG->$name;
         foreach (self::REQUIRED_CONFIGS as $key) {
             if (!array_key_exists($key, $cfg)) {
-                throw new \coding_exception('The $CFG->'.$name.' is missing the \''.$key.'\' option.  '.
+                throw new \core\exception\coding_exception('The $CFG->'.$name.' is missing the \''.$key.'\' option.  '.
                     'Required configs: '.implode(', ', self::REQUIRED_CONFIGS));
             }
         }
@@ -111,7 +111,7 @@ class aws_sdk {
                     return new aws_apcu_cache();
                 }
             } else {
-                throw new \coding_exception('The $CFG->'.$name.'[\'credentials_cache\'] value is unknown: '.$type);
+                throw new \core\exception\coding_exception('The $CFG->'.$name.'[\'credentials_cache\'] value is unknown: '.$type);
             }
         }
 
