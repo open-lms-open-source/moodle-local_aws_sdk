@@ -89,7 +89,7 @@ class aws_sdk_test extends \advanced_testcase {
         aws_sdk::config_from_cfg('phpunit_local_aws_sdk_test');
     }
 
-    public function cfg_provider() {
+    public static function cfg_provider() {
         aws_sdk::autoload();
 
         $data = [

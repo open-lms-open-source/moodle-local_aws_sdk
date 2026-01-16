@@ -76,7 +76,7 @@ class aws_apcu_cache_test extends \advanced_testcase {
         $this->assertNull($cache->get(self::TEST_KEY));
     }
 
-    public function value_provider() {
+    public static function value_provider() {
         aws_sdk::autoload();
 
         return [
